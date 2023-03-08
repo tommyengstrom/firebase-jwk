@@ -17,9 +17,11 @@ dependencies:
 - servant-server
 - text
 - wai
+- time
 - warp
 - mtl
 - jose
+- monad-time
 
 default-extensions:
       ImportQualifiedPost

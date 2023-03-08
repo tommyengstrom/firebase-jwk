@@ -27,12 +27,14 @@ library
     , firebase-jwk
     , http-types
     , jose
+    , monad-time
     , mtl
     , servant
     , servant-auth
     , servant-auth-server
     , servant-server
     , text
+    , time
     , wai
     , warp
   default-language: Haskell2010
@@ -55,6 +57,7 @@ test-suite servant-auth-firebase-test
     , hspec
     , http-types
     , jose
+    , monad-time
     , mtl
     , servant
     , servant-auth
@@ -62,6 +65,7 @@ test-suite servant-auth-firebase-test
     , servant-auth-server
     , servant-server
     , text
+    , time
     , wai
     , warp
   default-language: Haskell2010
