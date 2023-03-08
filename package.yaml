@@ -23,8 +23,10 @@ dependencies:
 - bytestring
 - aeson
 - unordered-containers
+- mtl
 - wreq
 - time
+- case-insensitive
 
 library:
   source-dirs: src

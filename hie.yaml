@@ -1,0 +1,13 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "firebase-jwk:lib"
+
+    - path: "./test"
+      component: "firebase-jwk:test:firebase-jwk-test"
+
+    - path: "servant-auth-firebase/src"
+      component: "servant-auth-firebase:lib"
+
+    - path: "servant-auth-firebase/test"
+      component: "servant-auth-firebase:test:servant-auth-firebase-test"
