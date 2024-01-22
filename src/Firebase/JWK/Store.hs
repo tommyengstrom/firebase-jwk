@@ -1,15 +1,16 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Firebase.JWK.Store (
-    getCurrentKeys,
-    createKeyStore,
-    keyStoreKeys,
-    KeyStore,
-) where
+module Firebase.JWK.Store
+    ( getCurrentKeys
+    , createKeyStore
+    , keyStoreKeys
+    , KeyStore
+    ) where
 
 import Control.Concurrent.MVar
 import Control.Lens
 import Control.Monad.Except
+import Control.Monad.IO.Class (liftIO)
 import Crypto.JWT
 import Data.ByteString.Char8 (unpack)
 import Data.ByteString.Lazy (ByteString)
@@ -30,9 +31,8 @@ getCurrentKeys = googleKeysToJWKs . view responseBody <$> (asJSON =<< get fireba
 
 -- --------------
 
-{- | Get the current keys and put them into the store.
- | This function expects the store to be empty.
--}
+-- | Get the current keys and put them into the store.
+--  | This function expects the store to be empty.
 fillKeyStore :: KeyStore -> IO ()
 fillKeyStore = fillKeyStoreLogic defaultKeyStoreLogic
 
