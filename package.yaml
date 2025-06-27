@@ -14,9 +14,9 @@ description:         Please see the README on Github at <https://github.com/reit
 
 dependencies:
 - base >= 4.7 && < 5
-- x509
-- x509-store
-- cryptonite
+- crypton-x509
+- crypton-x509-store
+- crypton
 - jose >= 0.8.0.0
 - text
 - lens
